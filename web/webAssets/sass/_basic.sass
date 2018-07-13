@@ -1,0 +1,594 @@
+/*!
+	-----------------------------------------------------------------------------
+	2.0 - Basicos
+	-----------------------------------------------------------------------------
+	*/
+
+body
+	background-color: $c-white-f6
+	font:
+		family: $f-base
+		size: 16px
+		weight: $light
+	color: $font-color
+
+a
+	color: $link
+	font-amily: $f-base
+	text-decoration: none
+	&:active,
+	&:focus,
+	&:hover
+		color: lighten($link , 10% )
+		text-decoration: none
+
+// h1, h2, h3, h4, h5, h6,
+// .h1, .h2, .h3, .h4, .h5, .h6
+// 	font-family: inherit
+// 	font-weight: $semi
+// 	text-shadow: none
+// 	line-height: 1.1
+// 	color: inherit
+// 	margin: 0
+
+// h1, .h1
+// 	@extend .fs-54
+
+// h2, .h2
+// 	@extend .fs-38
+
+// h3, .h3
+// 	@extend .fs-28
+
+// h4, .h4
+// 	@extend .fs-24
+
+// h5, .h5
+// 	@extend .fs-18
+
+// h6, .h6
+// 	@extend .fs-16
+
+
+/*  Btn
+	================================================ */
+.ladda-button
+	background-color: transparent
+	border-radius: 0
+	padding: 0
+
+.btn-primary.ladda-button[disabled],
+.btn-primary.ladda-button[disabled]:hover,
+.btn-primary.ladda-button[data-loading],
+.btn-primary.ladda-button[data-loading]:hover
+	background-color: $primary
+
+.btn-info.ladda-button[disabled],
+.btn-info.ladda-button[disabled]:hover,
+.btn-info.ladda-button[data-loading],
+.btn-info.ladda-button[data-loading]:hover
+	background-color: $info
+
+.btn-success.ladda-button[disabled],
+.btn-success.ladda-button[disabled]:hover,
+.btn-success.ladda-button[data-loading],
+.btn-success.ladda-button[data-loading]:hover
+	background-color: $success
+
+.btn-warning.ladda-button[disabled],
+.btn-warning.ladda-button[disabled]:hover,
+.btn-warning.ladda-button[data-loading],
+.btn-warning.ladda-button[data-loading]:hover
+	background-color: $warning
+
+.btn
+	display: inline-block
+	text-align: center
+	white-space: nowrap
+	vertical-align: middle
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	border: 1px solid transparent
+	padding: 8px 25px
+	line-height: 1.5
+	font-size: $fs-16
+	font-weight: $light
+	letter-spacing: 1px
+	border-radius: 3px
+	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+	&.btn-lg
+		font-size: $fs-18
+		padding: 20px 100px
+	&.btn-sm
+		border-radius: 3px
+		font-size: $fs-14
+		line-height: 1.5
+		padding: 5px 10px
+	&.btn-xs
+		border-radius: 3px
+		font-size: $fs-14
+		line-height: 1.5
+		padding: 1px 5px
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn
+	cursor: not-allowed
+	opacity: .65
+	filter: alpha(opacity=65)
+	box-shadow: none
+
+.btn-default
+	background-color: $white
+	border-color: #777
+	box-shadow: 0 2px 0 0 #444
+	color: $font-color
+	&:active,
+	&:focus,
+	&:hover,
+	&:active,
+	&:active:focus,
+	&:active:hover,
+	&:disabled,
+	&[disabled]:hover,
+	&[disabled]:focus,
+	&:hover,
+	&:focus,
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active
+		background-color: #e6e6e6
+		border-color: darken( #8c8c8c, 10% )
+		box-shadow: 0 2px 0 0 #444
+		color: $font-color
+	&:active,
+	&:active,
+	&:active:focus,
+	&:active:hover,
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active,
+	&.active
+		box-shadow: inset 0 3px 5px rgba($black,.125)
+
+.btn-primary
+	background-color: $c-secondary
+	border-color: $c-secondary
+	box-shadow: 0 2px 0 0 darken( $c-secondary, 30% )
+	color: $white
+	&:active,
+	&:focus,
+	&:hover,
+	&:active,
+	&:active:focus,
+	&:active:hover,
+	&:disabled,
+	&[disabled]:hover,
+	&[disabled]:focus,
+	&:hover,
+	&:focus
+		background-color: darken( $c-secondary, 7% )
+		border-color: darken( $c-secondary, 10% )
+		box-shadow: 0 2px 0 0 darken( $c-secondary, 25% )
+		color: $white
+	&:active,
+	&:active,
+	&:active:focus,
+	&:active:hover,
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active,
+	&.active
+		box-shadow: inset 0 3px 5px rgba($black,.125)
+
+.btn-error
+	background-color: $btn-error
+	border-color: $btn-error
+	box-shadow: 0 2px 0 0 darken( $btn-error, 30% )
+	color: $white
+	&:active,
+	&:focus,
+	&:hover,
+	&:active,
+	&:active:focus,
+	&:active:hover,
+	&:disabled,
+	&[disabled]:hover,
+	&[disabled]:focus,
+	&:hover,
+	&:focus
+		background-color: darken( $btn-error, 7% )
+		border-color: darken( $btn-error, 10% )
+		box-shadow: 0 2px 0 0 darken( $btn-error, 25% )
+		color: $white
+	&:active,
+	&:active,
+	&:active:focus,
+	&:active:hover,
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active,
+	&.active
+		box-shadow: inset 0 3px 5px rgba($black,.125)
+
+.btn-animate-vertical
+	span
+		>
+			.icon
+				top: -10px
+
+/*  Label
+	======================================= */
+.form-material
+	.form-control:-webkit-autofill~.floating-label
+		top: -1.3rem
+
+	.form-control~.floating-label
+		padding: 0 10px
+
+/* Active */
+.form-material
+	.form-control.focus~.floating-label,
+	.form-control:focus~.floating-label
+		color: $primary
+		top: -1.3rem
+
+/* Error */
+.form-material.form-group.has-danger
+	.form-control.focus~.floating-label,
+	.form-control:focus~.floating-label,
+	.form-control:not(.empty)~.floating-label
+		color: $error
+		top: -1.3rem
+
+/* Succes */
+.form-material.form-group.has-success
+	.form-control.focus~.floating-label,
+	.form-control:focus~.floating-label,
+	.form-control:not(.empty)~.floating-label
+		color: $primary
+		top: -1.3rem
+
+
+/*  Input
+	======================================= */
+.form-material
+	.form-control,
+	.form-control.focus,
+	.form-control:focus
+		background-image: -webkit-gradient(linear,left top,left bottom,from(primary),to(primary)),-webkit-gradient(linear,left top,left bottom,from($secondary),to($secondary))
+		background-image: -webkit-linear-gradient(primary,primary),-webkit-linear-gradient($secondary,$secondary)
+		background-image: -o-linear-gradient(primary,primary),-o-linear-gradient($secondary,$secondary)
+		background-image: linear-gradient(primary,primary),linear-gradient($secondary,$secondary)
+
+.form-material.form-group.has-success
+	.form-control.focus,
+	.form-control:focus,
+	.form-control:not(.empty)
+		background-image: -webkit-gradient(linear,left top,left bottom,from(primary),to(primary)),-webkit-gradient(linear,left top,left bottom,from($secondary),to($secondary))
+		background-image: -webkit-linear-gradient(primary,primary),-webkit-linear-gradient($secondary,$secondary)
+		background-image: -o-linear-gradient(primary,primary),-o-linear-gradient($secondary,$secondary)
+		background-image: linear-gradient(primary,primary),linear-gradient($secondary,$secondary)
+
+.form-control
+	color: lighten($font-color, 25%)
+
+.form-control
+	width: 100%
+	height: 39px
+	padding: 6px 12px
+	background-color: $white
+	border: 1px solid #ccc
+	border-radius: 4px
+	box-shadow: inset 0 1px 1px rgba($black,.075)
+	-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+	&:active,
+	&:focus
+		border-color: #66afe9
+		outline: 0
+		box-shadow: inset 0 1px 1px rgba($black,.075),0 0 8px rgba($accent,.6)
+	
+.form-control,
+output
+	font-size: $fs-18
+	font-weight: $light
+	line-height: 1.428571429
+	color: #555
+	display: block
+	+placeholder
+		color: #888
+
+
+label,
+.control-label
+	text-align: left
+	font-size: $fs-18
+	font-weight: $bold
+	display: inline-block
+	margin-bottom: 5px
+	padding-top: 7px
+	width: 100%
+
+
+/* Login */
+.login
+	// background-color: red
+	.brand
+		.brand-img
+			height: 100px
+			margin-bottom: 20px
+	
+	form
+		.form-group
+			.help-block.help-block-error
+				color: $error
+				font-size: .9rem
+				text-align: left
+
+// Body
+body.pace-done
+	// padding-top: 7.858rem
+	padding-top: 9.125rem
+
+/*  Header
+	======================================= */
+.navbar-inverse
+	background-color: $primary
+	.navbar-collapse,
+	.navbar-form
+		border-color: $primary
+
+.site-navbar-small
+	
+	.site-navbar
+		height: 4.886rem
+		min-height: 4.886rem
+		.navbar-brand
+			@extend .fs-34
+			@extend .fw-light
+			padding: 12px 0
+		.navbar-toolbar
+			> li
+				> a
+					text-decoration: none
+
+.navbar-inverse
+	.navbar-toolbar
+		.nav-link
+			text-decoration: none
+
+.site-navbar
+	.navbar-header
+		.navbar-brand-logo
+			// height: 34px
+			height: 22px
+
+.site-navbar.navbar.navbar-default
+
+	.nav-menu-container
+		margin: 0 auto
+		max-width: 96%
+		+respond-to(lg)
+			width: 1170px
+		+respond-to(md)
+			width: 970px
+		+respond-to(sm)
+			width: 750px
+		+respond-to(xs)
+			max-width: 100%
+			width: 100%
+
+/*  Footer
+	======================================= */
+.site-footer
+	height: auto
+	padding: 0
+
+	.footer-container
+		margin: 0 auto
+		max-width: 96%
+		+respond-to(lg)
+			width: 1170px
+		+respond-to(md)
+			width: 970px
+		+respond-to(sm)
+			width: 750px
+		+respond-to(xs)
+			max-width: 100%
+			width: 100%
+		.site-footer-legal
+			align-items: center
+			display: flex
+			justify-content: center
+			padding: 8px 24px
+			width: 100%
+
+.page-copyright
+	.social
+		a
+			img
+				height: 30px
+
+/*  Usuarios
+	======================================= */
+/* Crear */
+.usuarios-create
+	.user-file
+		cursor: pointer
+		display: block
+		height: 200px
+		margin: 0 auto
+		max-width: 80%
+		width: 200px
+
+/* Actualizar */
+.usuarios-actualizar
+	.user-file
+		cursor: pointer
+		display: block
+		height: 200px
+		margin: 0 auto
+		max-width: 80%
+		width: 200px
+
+// Loader
+.loader-overlay
+	background-color: $primary
+	background-image: url(../images/logo-latingal-boutique.png)
+	background-position: 50%
+	background-repeat: no-repeat
+	background-size: 100px
+
+// Loading
+.animsition-loading
+	background-color: $gray-900
+	border-left: 5px solid $accent
+
+// Modal
+.modal-backdrop
+	background-color: $modal
+	// position: absolute
+	// z-index: 9906
+
+.modal
+	background-color: $modal
+	.modal-dialog
+		.modal-content
+			border: 1px solid transparent
+			border-radius: 0
+			box-shadow: 0 5px 15px rgba($black,.5)
+			.modal-header
+				background-color: $c-black-3
+				border-bottom: 1px solid transparent
+				color: $white
+				min-height: 16.43px
+				padding: 15px
+				position: relative
+				.close
+					display: none
+				h4.modal-title
+					color: $white
+					@extend .fw-light
+					text-align: center
+					width: 100%
+			.modal-body
+				padding: 40px 40px 20px
+			.modal-footer
+				border-top: 1px solid transparent
+				padding: 15px
+
+// Tooltip
+.tooltip
+	.tooltip-inner
+		background-color: $primary
+		@extend .fs-16
+		padding: 4px 10px
+
+	&.tooltip-2,
+	&.tooltip-success
+		.tooltip-inner
+			background-color: $primary
+
+.tooltip.bs-tether-element-attached-left,
+.tooltip-2.bs-tether-element-attached-left,
+.tooltip-success.bs-tether-element-attached-left
+	.tooltip-inner::before
+		border-right-color: $primary
+
+.tooltip.tooltip-right,
+.tooltip-2.tooltip-right,
+.tooltip-success.tooltip-right
+	.tooltip-inner::before 
+		border-right-color: $primary
+
+.tooltip.bs-tether-element-attached-bottom
+	.tooltip-inner::before
+		border-top-color: $primary
+
+.tooltip.tooltip-top
+	.tooltip-inner::before
+		border-top-color: $primary
+
+
+// Summary
+.summary
+	color: $font-color
+	display: flex
+	font-size: $fs-20
+	font-weight: $light
+	justify-content: flex-end
+	margin-bottom: 8px
+	padding: 4px 8px
+	b
+		color: $font-color
+		font-weight: $semi
+		margin: 0 6px
+
+// Pagination
+.pagination
+	display: flex
+	justify-content: flex-end
+	li
+		display: flex
+		a,
+		span,
+		.page-link
+			align-items: center
+			background-color: transparent
+			border: 1px solid $c-grey-d
+			display: flex
+			font-weight: $regular
+			justify-content: center
+			margin: 0 2px
+			padding: 4px 2px
+			color: $primary
+			text-decoration: none
+			width: 40px
+			&:hover
+				background-color: #eee
+				color: #7B9CF0
+		&.prev,
+		&.next
+			a
+				color: $primary
+		&.disabled
+			span
+				background-color: rgba($white,.16)
+				border-color: rgba($primary,.16)
+				color: rgba($primary,.4)
+		&.active
+			a
+				background-color: $primary
+				border-color: $primary
+				color: $white
+				&:hover
+					background-color: rgba($primary,.25)
+					border-color: rgba($primary,.65)
+					color: $primary
+
+// Page
+.page
+	overflow-x: hidden
+	.page-content
+		margin: 0 auto
+		max-width: 96%
+		padding: 32px 0
+		+respond-to(lg)
+			width: 1170px
+		+respond-to(md)
+			width: 970px
+		+respond-to(sm)
+			width: 750px
+		+respond-to(xs)
+			max-width: 100%
+			padding-left: 15px
+			padding-right: 15px
+			width: 100%
+
+
+	
+// Table
+table
+	&.table
+		background-color: transparent
+		margin-bottom: 25px
+		width: 100%

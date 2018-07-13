@@ -1,0 +1,7 @@
+<!-- Page -->
+<div class="page">
+    <div class="page-content">
+      <?=$content?>
+    </div>
+  </div>
+  <!-- End Page -->

@@ -10,6 +10,10 @@ use yii\helpers\Html;
 $this->title = $name;
 
 $this->params['classBody'] = "page-login-v3 layout-full preguntas-page";
+
+
+header("Location: https://www.gob.mx/senasica");
+die();
 ?>
 <div class="site-error">
 
@@ -17,6 +21,10 @@ $this->params['classBody'] = "page-login-v3 layout-full preguntas-page";
 
     <div class="alert alert-danger">
         <?= nl2br(Html::encode($message)) ?>
+    </div>
+
+    <div class="alert alert-danger">
+        <?= nl2br(Html::encode($exception)) ?>
     </div>
 
     <p>

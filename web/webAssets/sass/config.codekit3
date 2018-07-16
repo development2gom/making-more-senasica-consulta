@@ -354,7 +354,7 @@
 		"ft": 2,
 		"ma": 1,
 		"oA": 0,
-		"oAP": "\/Applications\/MAMP\/htdocs\/making-more\/senasica\/web\/webAssets\/css\/site-extend.css",
+		"oAP": "\/Applications\/MAMP\/htdocs\/making-more\/making-more-senasica-consulta\/web\/webAssets\/css\/site-extend.css",
 		"oF": 6,
 		"oS": 3,
 		"uL": 0
@@ -366,7 +366,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 553027814,
-	"displayValue": "Senesica - sass",
+	"displayValue": "Senesica consulta - sass",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-greg",
 	"iconImageWasSetByUser": 0

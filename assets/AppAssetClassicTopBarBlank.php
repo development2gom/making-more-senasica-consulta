@@ -20,6 +20,7 @@ class AppAssetClassicTopBarBlank extends AssetBundle
     public $css = [
         'plugins/ladda/ladda.min.css',
         'templates/classic/topbar/assets/examples/css/pages/login-v3.min.css',
+        'css/site-extend.css.map',
         'css/site-extend.css',
         "https://framework-gb.cdn.gob.mx/assets/styles/main.css"
     ];

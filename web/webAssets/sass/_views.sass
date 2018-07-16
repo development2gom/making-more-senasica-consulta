@@ -48,12 +48,14 @@
 
 
 // View
-.actas-retencion-view
+body.actas-retencion-view
+	padding-top: 2.75rem
 
 	h2.title-gral
 		@extend .fs-36
 		@extend .fw-regular
 		position: relative
+		text-align: left
 		text-transform: uppercase
 		&::before
 			content: " "
@@ -77,9 +79,15 @@
 		width: 100%
 
 		p
+			font-size: $fs-26
 			margin-bottom: 8px
+			+respond-to(xs)
+				margin-bottom: 16px
 			span
 				@extend .fw-regular
+				+respond-to(xs)
+					display: block
+					margin-bottom: 4px
 		
 		hr
 			background-color: rgba($c-grey-d,.8)

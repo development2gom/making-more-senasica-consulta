@@ -7,38 +7,46 @@ use yii\widgets\DetailView;
 /* @var $model app\models\WrkActasRetencion */
 
 $this->title = "Acta";
-$this->params['breadcrumbs'][] = ['label' => 'Wrk Actas Retencions', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['classBody'] = "site-navbar-small actas-retencion-view";
 ?>
-<div class="wrk-actas-retencion-view">
-    <?=$model->id_oficial?>
-    <?=$model->txt_folio?>
-    <?=$model->txt_fecha?>
-    <?=$model->txt_oficina?>
-    <?=$model->txt_tipo_identificacion?>
-    <?=$model->txt_numero_identificacion?>
-    <?=$model->txt_nombre?>
-    <?=$model->txt_apellido_paterno?>
-    <?=$model->txt_apellido_materno?>
-    <?=$model->txt_nacionalidad?>
-    <?=$model->txt_correo?>
-    <?=$model->txt_estado?>
-    <?=$model->txt_municipio?>
-    <?=$model->txt_calle?>
-    <?=$model->txt_numero?>
-    <?=$model->txt_tipo_acta?>
-    <?=$model->txt_pais_origen?>
-    <?=$model->txt_pais_procedencia?>
-    <?=$model->txt_tipo_mercancia?>
-    <?=$model->txt_cantidad?>
-    <?=$model->txt_unidad_medida?>
-    <?=$model->txt_descripcion_hechos?>
-    <?=$model->txt_detectado_por?>
-    <?=$model->txt_dictamen?>
-    <?=$model->txt_nombre_verificador_tea?>
-    <?=$model->txt_clave_verificador_tea?>
-    <?=$model->txt_nombre_completo_oficial?>
-    <?=$model->data?>
+
+<h2 class="title-gral"><?= Html::encode($this->title) ?></h2>
+
+<div class="cont-view">
+
+    <p><span>Oficial:</span> <?=$model->id_oficial?></p>
+    <p><span>Folio:</span> <?=$model->txt_folio?></p>
+    <p><span>Fecha:</span> <?=$model->txt_fecha?></p>
+    <p><span>Oficina:</span> <?=$model->txt_oficina?></p>
+    <p><span>Tipo de identificación:</span> <?=$model->txt_tipo_identificacion?></p>
+    <p><span>Número de identificación:</span> <?=$model->txt_numero_identificacion?></p>
+
+    <hr>
+
+    <p><span>Nombre:</span> <?=$model->txt_nombre?></p>
+    <p><span>Apellidos:</span> <?=$model->txt_apellido_paterno?> <?=$model->txt_apellido_materno?></p>
+    <p><span>Nacionalidad:</span> <?=$model->txt_nacionalidad?></p>
+    <p><span>Correo:</span> <?=$model->txt_correo?></p>
+    <p><span>Dirección:</span> <?=$model->txt_calle?>, <?=$model->txt_numero?>, <?=$model->txt_municipio?>, <?=$model->txt_estado?></p>
+
+    <hr>
+
+    <p><span>Tipo de acta:</span> <?=$model->txt_tipo_acta?></p>
+    <p><span>País de origen:</span> <?=$model->txt_pais_origen?></p>
+    <p><span>País de procedencia:</span> <?=$model->txt_pais_procedencia?></p>
+    <p><span>Tipo de mercancia:</span> <?=$model->txt_tipo_mercancia?></p>
+    <p><span>Cantidad:</span> <?=$model->txt_cantidad?></p>
+    <p><span>Unidad de medida:</span> <?=$model->txt_unidad_medida?></p>
+    <p><span>Descripción o Hechos:</span> <?=$model->txt_descripcion_hechos?></p>
+
+    <hr>
+
+    <p><span>Detectado por:</span> <?=$model->txt_detectado_por?></p>
+    <p><span>Dictament:</span> <?=$model->txt_dictamen?></p>
+    <p><span>Clave del Verificador:</span> <?=$model->txt_clave_verificador_tea?></p>
+    <p><span>Nombre de Verificador:</span> <?=$model->txt_nombre_verificador_tea?></p>
+    <p><span>Nombre de Oficial:</span> <?=$model->txt_nombre_completo_oficial?></p>
+    <p><span>Data:</span> <?=$model->data?></p>
 
 
 </div>

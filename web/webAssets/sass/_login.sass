@@ -8,7 +8,16 @@
 
 // Form
 body.login-page
+	padding-top: 0
+
+	header
+		display: none !important
+	
+	footer.main-footer
+		display: none !important
+
 	.panel
+		margin: 0 auto
 		.panel-body
 			padding: 32px 32px 24px
 
@@ -27,11 +36,17 @@ body.login-page
 	form
 		margin: 32px 0 16px
 
+	&::before
+		background-color: $c-white-f6
+		background-image: url('../images/bkgd.jpg')
+		background-image: none
+		background-repeat: no-repeat
+
 .form-group
 	&.has-error
 		.help-block
-			color: $error
-			@extend .fs-14
+			color: $c-red
+			font-size: 1.225rem
 			margin-top: 4px
 			text-align: left
 

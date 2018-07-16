@@ -22,14 +22,14 @@ a
 		color: lighten($link , 10% )
 		text-decoration: none
 
-// h1, h2, h3, h4, h5, h6,
-// .h1, .h2, .h3, .h4, .h5, .h6
-// 	font-family: inherit
-// 	font-weight: $semi
-// 	text-shadow: none
-// 	line-height: 1.1
-// 	color: inherit
-// 	margin: 0
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+	font-family: inherit
+	font-weight: $semi
+	text-shadow: none
+	line-height: 1.1
+	color: inherit
+	margin: 0
 
 // h1, .h1
 // 	@extend .fs-54
@@ -61,7 +61,7 @@ a
 .btn-primary.ladda-button[disabled]:hover,
 .btn-primary.ladda-button[data-loading],
 .btn-primary.ladda-button[data-loading]:hover
-	background-color: $primary
+	background-color: $c-secondary
 
 .btn-info.ladda-button[disabled],
 .btn-info.ladda-button[disabled]:hover,
@@ -99,7 +99,7 @@ a
 	border-radius: 3px
 	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
 	&.btn-lg
-		font-size: $fs-18
+		font-size: $fs-28
 		padding: 20px 100px
 	&.btn-sm
 		border-radius: 3px
@@ -301,7 +301,7 @@ output
 label,
 .control-label
 	text-align: left
-	font-size: $fs-18
+	font-size: $fs-20
 	font-weight: $bold
 	display: inline-block
 	margin-bottom: 5px
@@ -320,8 +320,8 @@ label,
 	form
 		.form-group
 			.help-block.help-block-error
-				color: $error
-				font-size: .9rem
+				color: $c-red
+				font-size: 1.225rem
 				text-align: left
 
 // Body
@@ -337,19 +337,52 @@ body.pace-done
 	.navbar-form
 		border-color: $primary
 
-.site-navbar-small
-	
+body,
+.site-navbar-small	
 	.site-navbar
-		height: 4.886rem
-		min-height: 4.886rem
+		height: 4.286rem
+		min-height: 4.286rem
+
+
+body,
+body.site-navbar-small	
+	.site-navbar
+		height: 4.286rem
+		min-height: 4.286rem
 		.navbar-brand
 			@extend .fs-34
 			@extend .fw-light
-			padding: 12px 0
+			padding: 10px 0 12px
 		.navbar-toolbar
 			> li
 				> a
+					color: $white
+					padding-bottom: .957rem
+					padding-top: .957rem
 					text-decoration: none
+					&:focus,
+					&:hover
+						background-color: rgba($c-black-3,.8)
+			
+				.dropdown-toggle
+					&::after
+						display: none
+
+			> .dropdown
+				> a
+					color: $white
+					height: 100%
+					// line-height: 32px
+					padding-bottom: .957rem
+					padding-top: .957rem
+					&:focus,
+					&:hover
+						background-color: rgba($c-black-3,.8)
+				
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover
+	background-color: rgba($c-black-3,.8) !important
 
 .navbar-inverse
 	.navbar-toolbar
@@ -525,45 +558,44 @@ body.pace-done
 
 // Pagination
 .pagination
-	display: flex
-	justify-content: flex-end
-	li
-		display: flex
-		a,
-		span,
-		.page-link
-			align-items: center
-			background-color: transparent
-			border: 1px solid $c-grey-d
-			display: flex
-			font-weight: $regular
-			justify-content: center
-			margin: 0 2px
-			padding: 4px 2px
-			color: $primary
+	padding-left: 0
+	margin: 25px 0
+	border-radius: 4px
+	> li
+		display: inline-block
+
+	> li
+		> a,
+		> span
+			position: relative
+			float: left
+			padding: 6px 12px
+			line-height: 1.428571429
 			text-decoration: none
-			width: 40px
-			&:hover
-				background-color: #eee
-				color: #7B9CF0
-		&.prev,
-		&.next
-			a
-				color: $primary
-		&.disabled
-			span
-				background-color: rgba($white,.16)
-				border-color: rgba($primary,.16)
-				color: rgba($primary,.4)
-		&.active
-			a
-				background-color: $primary
-				border-color: $primary
-				color: $white
-				&:hover
-					background-color: rgba($primary,.25)
-					border-color: rgba($primary,.65)
-					color: $primary
+			color: #12C
+			background-color: #fff
+			border: 1px solid #ddd
+			margin-left: -1px
+
+	> li:first-child
+		> a,
+		> span
+			margin-left: 0
+			border-bottom-left-radius: 4px
+			border-top-left-radius: 4px
+
+	> .active
+		> a,
+		> .active > a:focus,
+		> .active > a:hover,
+		> .active > span,
+		> .active > span:focus,
+		> .active > span:hover 
+			z-index: 2
+			color: $white
+			background-color: $c-secondary
+			border-color: $c-secondary
+			cursor: default
 
 // Page
 .page
@@ -592,3 +624,21 @@ table
 		background-color: transparent
 		margin-bottom: 25px
 		width: 100%
+
+// Dropdown
+.dropdown-item
+	text-decoration: none
+
+// Select 2
+.select2-container--krajee
+	.select2-selection--single
+		height: 39px
+		padding: 6px 12px
+		line-height: 1.428571429
+		color: $font-color
+		font-size: 18px
+
+.select2-container--krajee
+	.select2-selection--single
+		.select2-selection__arrow
+			height: 37px

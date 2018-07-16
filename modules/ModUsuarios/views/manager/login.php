@@ -9,7 +9,7 @@ use yii\bootstrap\ActiveForm;
 use yii\helpers\Url;
 
 $this->title = 'Login';
-$this->params['classBody'] = "layout-full login-page";
+$this->params['classBody'] = "page-login-v3 layout-full login-page";
 
 ?>
 
@@ -43,7 +43,7 @@ $this->params['classBody'] = "layout-full login-page";
 		</div>
 
 		<div class="form-group form-group-actions">
-			<?= Html::submitButton('<span class="ladda-label">Ingresar</span>', ["data-style" => "zoom-in", 'class' => 'btn btn-primary btn-block btn-lg mt-20 ladda-button', 'name' => 'login-button']); ?>
+			<?= Html::submitButton('<span class="ladda-label">Ingresar</span>', ["data-style" => "zoom-in", 'class' => 'btn btn-primary btn-block mt-20 ladda-button', 'name' => 'login-button']); ?>
 		</div>
 
 		<div class="form-group necesito-cuenta">

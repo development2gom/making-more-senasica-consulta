@@ -1,8 +1,9 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use kartik\grid\GridView;
 use app\models\EntOficiales;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\EntOficialesSearch */
@@ -13,20 +14,33 @@ $this->registerJsFile(
   ['depends' => [\app\assets\AppAsset::className()]]
 );
 
-$this->title = 'Oficiales';
-$this->params['breadcrumbs'][] = $this->title;
+
+$this->title = 'Usuarios móviles';
+
+$this->params['classBody'] = "site-navbar-small usuarios-list";
+
 ?>
-<div class="ent-oficiales-index">
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+<div class="list-head">
 
-    <p>
-        <?= Html::a('Crear', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+  <h2 class="title"><?=$this->title?></h2>
+
+  <div class="list-actions">
+    <?= Html::a('Crear Usuario', ['create'], ['class' => 'btn btn-primary']) ?>
+  </div>
+
+</div>
+
+
+<div class="list-panel">
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'tableOptions' => [
+          'class'=>"table table-hover list-table"
+        ],
+        'layout' => '{items}{summary}{pager}',
         'columns' => [
             // ['class' => 'yii\grid\SerialColumn'],
 
@@ -45,14 +59,15 @@ $this->params['breadcrumbs'][] = $this->title;
             'txt_rfc',
             // 'b_habilitado',
             [
-                'contentOptions' => [
-                  'class'=>"td-status"
-                ],
+              'headerOptions' => ['class' => 'text-center'],
+              'contentOptions' => ['class' => 'td-status text-center'],
                 'attribute' => 'b_habilitado',
                 'filter'=>[EntOficiales::STATUS_ACTIVED=>'Activo', EntOficiales::STATUS_BLOCKED=>'Inactivo'],
                 'filterInputOptions'=>[
-                    'prompt'=>'Ver todos'
+                    'prompt'=>'Ver todos',
+                    'class'=>'form-control',
                 ],
+
                 'format'=>'raw',
                 
                 'value'=>function($data){
@@ -61,12 +76,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 $inactivo = $data->b_habilitado == 0?'active':'';
                     
                   return '<div class="btn-groups" data-toggle="buttons" role="group">
-                  <label class="btn btn-active '.$activo.'">
-                  <input class="js-activar-oficial" type="radio" name="options" autocomplete="off" value="activar"   data-token="'.$data->uddi.'" />
+                  <label class="btn btn-sm btn-active '.$activo.'">
+                  <input class="js-activar-oficial" type="radio" name="options" autocomplete="off" value="activar"   data-uddi="'.$data->uddi.'" data-url="'.Url::base().'" />
                   Activo
                   </label>
-                  <label class="btn btn-inactive '.$inactivo.'">
-                  <input class="js-bloquear-oficial"  type="radio" name="options" autocomplete="off" value="bloquear"  data-token="'.$data->uddi.'" />
+                  <label class="btn btn-sm btn-inactive '.$inactivo.'">
+                  <input class="js-bloquear-oficial"  type="radio" name="options" autocomplete="off" value="bloquear"  data-uddi="'.$data->uddi.'" data-url="'.Url::base().'" />
                   Inactivo
                   </label>
                   </div>';
@@ -76,8 +91,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
             [
                 'attribute' => 'Editar',
+                'headerOptions' => ['class' => 'text-center'],
                 'contentOptions' => [
-                  'class'=>"td-actions td-actions-i1"
+                  'class'=>"td-actions td-actions-i1 text-center"
                 ],
                 'format'=>'raw',
               
@@ -98,6 +114,22 @@ $this->params['breadcrumbs'][] = $this->title;
   
                 }
               ]
+        ],
+        'panelTemplate' => "{panelHeading}\n{items}\n{summary}\n{pager}",
+        'responsive'=>true,
+        'striped'=>false,
+        'hover'=>false,
+        'bordered'=>false,
+        'pager'=>[
+            'linkOptions' => [
+                'class' => 'page-link'
+            ],
+            'pageCssClass'=>'page-item',
+            'prevPageCssClass' => 'page-item',
+            'nextPageCssClass' => 'page-item',
+            'firstPageCssClass' => 'page-item',
+            'lastPageCssClass' => 'page-item',
+            'maxButtonCount' => '5',
         ],
        
     ]); ?>

@@ -49,9 +49,9 @@ class WrkActasRetencionSearch extends WrkActasRetencion
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-            'pagination' => [
-                'pageSize' => 1,
-            ],
+            // 'pagination' => [
+            //     'pageSize' => 1,
+            // ],
         ]);
 
         $this->load($params);

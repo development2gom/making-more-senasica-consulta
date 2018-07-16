@@ -14,6 +14,7 @@ use app\models\CatTiposMercancias;
 use app\models\CatPaises;
 use kartik\date\DatePicker;
 
+
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\WrkActasRetencionSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -44,7 +45,7 @@ $this->registerJsFile(
     <h2 class="title"><?=$this->title?></h2>
 
     <div class="list-actions">
-        <?= Html::a('<span><i class="icon wb-plus" aria-hidden="true"></i>Crear</span>', ['create'], ['class' => 'btn btn-primary btn-animate btn-animate-vertical']) ?>
+        <?php //= Html::a('<span><i class="icon wb-plus" aria-hidden="true"></i>Crear</span>', ['create'], ['class' => 'btn btn-primary btn-animate btn-animate-vertical']) ?>
     </div>
 
     </div>
@@ -55,6 +56,9 @@ $this->registerJsFile(
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'tableOptions' => [
+            'class'=>"table table-hover list-table"
+        ],
         'pjax'=>true,
         'pjaxSettings'=>[
             'options'=>[
@@ -199,14 +203,14 @@ $this->registerJsFile(
                 'buttons' => [
                     'ver' => function($url, $model) {
                         
-                        $a = Html::a("<i class='icon wb-pencil' aria-hidden='true'></i>", 
+                        $a = Html::a("<i class='icon wb-eye' aria-hidden='true'></i>", 
                         ["actas-retencion/view", 'token'=>$model->txt_folio], 
                         [
                             "class"=>"btn btn-primary btn-edit no-pjax",
                             "data-token"=>$model->txt_folio,
                         ]);
 
-                        $contenedor = '<div class="td-actions-tooltip" data-toggle="tooltip" data-original-title="Editar" data-template="<div class=\'tooltip tooltip-2 tooltip-primary\' role=\'tooltip\'><div class=\'arrow\'></div><div class=\'tooltip-inner\'></div></div>">
+                        $contenedor = '<div class="td-actions-tooltip" data-toggle="tooltip" data-original-title="Ver" data-template="<div class=\'tooltip tooltip-2 tooltip-primary\' role=\'tooltip\'><div class=\'arrow\'></div><div class=\'tooltip-inner\'></div></div>">
                            '.$a.' 
                         </div>';
 
@@ -233,5 +237,3 @@ $this->registerJsFile(
         ],
     ]); ?>
 </div>
-
-

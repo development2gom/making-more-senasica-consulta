@@ -18,6 +18,9 @@ use kartik\date\DatePicker;
 /* @var $model app\models\WrkActasRetencionSearch */
 /* @var $form yii\widgets\ActiveForm */
 
+$this->title = 'Exportar Reportes';
+$this->params['classBody'] = "site-navbar-small reportes-create";
+
 $oficiales = EntOficiales::find()->where(["b_habilitado"=>1])->orderBy("txt_nombre")->all();
 $identificaciones = CatTiposIdentificacion::find()->where(["b_habilitado"=>1])->orderBy("txt_nombre")->all();
 $detectados = CatDetectadosPor::find()->where(["b_habilitado"=>1])->orderBy("txt_nombre")->all();
@@ -28,7 +31,11 @@ $mercancias = CatTiposMercancias::find()->where(["b_habilitado"=>1])->orderBy("t
 $paises = CatPaises::find()->where(["b_habilitado"=>1])->orderBy("txt_nombre")->all();
 ?>
 
-<div class="wrk-actas-retencion-search">
+
+<h2 class="title-gral"><?= Html::encode($this->title) ?></h2>
+
+<div class="cont-create">
+
 
     <?php $form = ActiveForm::begin([
         'action' => ['//reportes/exportar'],
@@ -38,178 +45,242 @@ $paises = CatPaises::find()->where(["b_habilitado"=>1])->orderBy("txt_nombre")->
         ]
     ]); ?>
 
-    <?php
-                    // Usage with model and Active Form (with no default initial value)
-                    echo DatePicker::widget([
-                        'model' => $model,
-                        'attribute' => 'startDate',
-                        'attribute2' => 'endDate',
-                        'options' => ['placeholder' => 'Fecha inicio', "id"=>"new"],
-                        'options2' => ['placeholder' => 'Fecha final', "id"=>"new2"],
-                        
-                        'type' => DatePicker::TYPE_RANGE,
-                        'form' => $form,
-                        'separator' => '<i class="icon  fa-arrows-h"></i>',
-                        
-                        'pluginOptions' => [
-                            'format' => 'dd-mm-yyyy',
-                            'autoclose' => true,
-                           
-                            'maxViewMode'=>2
-                        ],
-                       ]);
-                   
-                    ?>
+        <div class="row">
 
-    <?= $form->field($model, 'id_oficial')
-                    ->widget(Select2::classname(), [
-                        'data' => ArrayHelper::map($oficiales, 'id_oficial', 'nombreCompleto'),
-                        'language' => 'es',
-                        'options' => ['placeholder' => 'Seleccionar oficial'],
-                        'pluginOptions' => [
-                            'allowClear' => true
-                        ],
-                    ]);
-                ?> 
+            <div class="col-md-12">
+                <?php
+                // Usage with model and Active Form (with no default initial value)
+                echo DatePicker::widget([
+                'model' => $model,
+                'attribute' => 'startDate',
+                'attribute2' => 'endDate',
+                'options' => ['placeholder' => 'Fecha inicio', "id"=>"new"],
+                'options2' => ['placeholder' => 'Fecha final', "id"=>"new2"],
 
-    <?= $form->field($model, 'txt_folio') ?>
+                'type' => DatePicker::TYPE_RANGE,
+                'form' => $form,
+                'separator' => '<i class="icon  fa-arrows-h"></i>',
 
-    <?= $form->field($model, 'txt_fecha')->widget(DatePicker::classname(), [
-        //'options' => ['placeholder' => 'Enter birth date ...'],
-        'type' => DatePicker::TYPE_INPUT,
-        'pluginOptions' => [
-            'autoclose'=>true,
-            'format' => 'dd-mm-yyyy'
-        ]
-    ]);?>
+                'pluginOptions' => [
+                'format' => 'dd-mm-yyyy',
+                'autoclose' => true,
 
-    <?=$form->field($model, 'txt_oficina') ?>
+                'maxViewMode'=>2
+                ],
+                ]);
 
-    <?= $form->field($model, 'txt_tipo_identificacion')
-                    ->widget(Select2::classname(), [
-                        'data' => ArrayHelper::map($identificaciones, 'txt_nombre', 'txt_nombre'),
-                        'language' => 'es',
-                        'options' => ['placeholder' => 'Seleccionar tipo de identificación'],
-                        'pluginOptions' => [
-                            'allowClear' => true
-                        ],
-                    ]);
                 ?>
+            </div>
 
-    <?=$form->field($model, 'txt_numero_identificacion') ?>
-
-    <?=$form->field($model, 'txt_nombre') ?>
-
-    <?=$form->field($model, 'txt_apellido_paterno') ?>
-
-    <?=$form->field($model, 'txt_apellido_materno') ?>
-
-    <?=$form->field($model, 'txt_nacionalidad') ?>
-
-    <?=$form->field($model, 'txt_correo') ?>
-
-    <?= $form->field($model, 'txt_estado')
-                    ->widget(Select2::classname(), [
-                        'data' => ArrayHelper::map($estados, 'id_estado', 'txt_nombre'),
-                        'language' => 'es',
-                        'options' => ['placeholder' => 'Seleccionar un estado'],
-                        'pluginOptions' => [
-                            'allowClear' => true
-                        ],
-                    ]);
+            <div class="col-md-4">
+                <?= $form->field($model, 'id_oficial')
+                ->widget(Select2::classname(), [
+                'data' => ArrayHelper::map($oficiales, 'id_oficial', 'nombreCompleto'),
+                'language' => 'es',
+                'options' => ['placeholder' => 'Seleccionar oficial'],
+                'pluginOptions' => [
+                'allowClear' => true
+                ],
+                ]);
                 ?>
+            </div>
 
-    <?=$form->field($model, 'txt_municipio') ?>
+            <!-- <div class="col-md-4">
+                <?php //= $form->field($model, 'txt_folio') ?>
+            </div> -->
 
-    <?=$form->field($model, 'txt_calle') ?>
+            <!-- <div class="col-md-4">
+                <?php //= $form->field($model, 'txt_fecha')->widget(DatePicker::classname(), [
+                //'options' => ['placeholder' => 'Enter birth date ...'],
+                // 'type' => DatePicker::TYPE_INPUT,
+                // 'pluginOptions' => [
+                // 'autoclose'=>true,
+                // 'format' => 'dd-mm-yyyy'
+                // ]
+                // ]);?>
+            </div> -->
 
-    <?=$form->field($model, 'txt_numero') ?>
+            <div class="col-md-4">
+                <?=$form->field($model, 'txt_oficina') ?>
+            </div>
 
-     <?= $form->field($model, 'txt_tipo_acta')
-                    ->widget(Select2::classname(), [
-                        'data' => ArrayHelper::map($tiposActas, 'txt_nombre', 'txt_nombre'),
-                        'language' => 'es',
-                        'options' => ['placeholder' => 'Seleccionar tipo de acta'],
-                        'pluginOptions' => [
-                            'allowClear' => true
-                        ],
-                    ]);
+            <!-- <div class="col-md-4">
+
+                <?php // = $form->field($model, 'txt_tipo_identificacion')
+                // ->widget(Select2::classname(), [
+                // 'data' => ArrayHelper::map($identificaciones, 'txt_nombre', 'txt_nombre'),
+                // 'language' => 'es',
+                // 'options' => ['placeholder' => 'Seleccionar tipo de identificación'],
+                // 'pluginOptions' => [
+                // 'allowClear' => true
+                // ],
+                // ]);
+                ?>
+            </div> -->
+
+            <!-- <div class="col-md-4">
+                <? //=$form->field($model, 'txt_numero_identificacion') ?>
+            </div> -->
+
+            <!-- <div class="col-md-4">
+                <?//=$form->field($model, 'txt_nombre') ?>
+            </div> -->
+
+            <!-- <div class="col-md-4">
+                <? //=$form->field($model, 'txt_apellido_paterno') ?>
+            </div> -->
+
+            <!-- <div class="col-md-4">
+                <? //=$form->field($model, 'txt_apellido_materno') ?>
+            </div> -->
+
+            <!-- <div class="col-md-4">
+                <? //=$form->field($model, 'txt_nacionalidad') ?>
+            </div>
+
+            <div class="col-md-4">
+                <? //=$form->field($model, 'txt_correo') ?>
+            </div> -->
+
+            <!-- <div class="col-md-4">
+                <? //= $form->field($model, 'txt_estado')
+                // ->widget(Select2::classname(), [
+                // 'data' => ArrayHelper::map($estados, 'id_estado', 'txt_nombre'),
+                // 'language' => 'es',
+                // 'options' => ['placeholder' => 'Seleccionar un estado'],
+                // 'pluginOptions' => [
+                // 'allowClear' => true
+                // ],
+                // ]);
                 ?> 
+            </div>-->
 
-    <?= $form->field($model, 'txt_pais_origen')
-                    ->widget(Select2::classname(), [
-                        'data' => ArrayHelper::map($paises, 'txt_nombre', 'txt_nombre'),
-                        'language' => 'es',
-                        'options' => ['placeholder' => 'Seleccionar país'],
-                        'pluginOptions' => [
-                            'allowClear' => true
-                        ],
-                    ]);
-                ?> 
+            <!-- <div class="col-md-4">
+                <? //=$form->field($model, 'txt_municipio') ?>
+            </div>
+            
+            <div class="col-md-4">
+                <? //=$form->field($model, 'txt_calle') ?>
+            </div>
+            
+            <div class="col-md-4">
+                <? //=$form->field($model, 'txt_numero') ?>
+            </div> -->
+            
+            <div class="col-md-4">
+                <?= $form->field($model, 'txt_tipo_acta')
+                ->widget(Select2::classname(), [
+                'data' => ArrayHelper::map($tiposActas, 'txt_nombre', 'txt_nombre'),
+                'language' => 'es',
+                'options' => ['placeholder' => 'Seleccionar tipo de acta'],
+                'pluginOptions' => [
+                'allowClear' => true
+                ],
+                ]);
+                ?>
+            </div>
+            
+            <!-- <div class="col-md-4">
+                <? //= $form->field($model, 'txt_pais_origen')
+                // ->widget(Select2::classname(), [
+                // 'data' => ArrayHelper::map($paises, 'txt_nombre', 'txt_nombre'),
+                // 'language' => 'es',
+                // 'options' => ['placeholder' => 'Seleccionar país'],
+                // 'pluginOptions' => [
+                // 'allowClear' => true
+                // ],
+                // ]);
+                ?>
+            </div>-->
+            
+            <!-- <div class="col-md-4">
+                <? //= $form->field($model, 'txt_pais_procedencia')
+                // ->widget(Select2::classname(), [
+                // 'data' => ArrayHelper::map($paises, 'txt_nombre', 'txt_nombre'),
+                // 'language' => 'es',
+                // 'options' => ['placeholder' => 'Seleccionar país'],
+                // 'pluginOptions' => [
+                // 'allowClear' => true
+                // ],
+                // ]);
+                ?>
+            </div>  -->
+            
+            <!-- <div class="col-md-4">
+                <? //= $form->field($model, 'txt_tipo_mercancia')
+                // ->widget(Select2::classname(), [
+                // 'data' => ArrayHelper::map($mercancias, 'txt_nombre', 'txt_nombre'),
+                // 'language' => 'es',
+                // 'options' => ['placeholder' => 'Seleccionar tipo de mercancia'],
+                // 'pluginOptions' => [
+                // 'allowClear' => true
+                // ],
+                // ]);
+                ?>
+            </div> -->
+            
+            <!-- <div class="col-md-4">
+                <? //=$form->field($model, 'txt_cantidad') ?>
+            </div>
+            
+            <div class="col-md-4">
+                <? //=$form->field($model, 'txt_unidad_medida') ?>
+            </div>
+            
+            <div class="col-md-4">
+                <? //=$form->field($model, 'txt_descripcion_hechos') ?>
+            </div>
+             -->
+            <!-- <div class="col-md-4">
+                <? //= $form->field($model, 'txt_detectado_por')
+                // ->widget(Select2::classname(), [
+                // 'data' => ArrayHelper::map($detectados, 'txt_nombre', 'txt_nombre'),
+                // 'language' => 'es',
+                // 'options' => ['placeholder' => 'Detectado por'],
+                // 'pluginOptions' => [
+                // 'allowClear' => true
+                // ],
+                // ]);
+                ?>
+            </div> -->
+            
+            <div class="col-md-4">
+                <?= $form->field($model, 'txt_dictamen')
+                ->widget(Select2::classname(), [
+                'data' => ArrayHelper::map($dictamenes, 'txt_nombre', 'txt_nombre'),
+                'language' => 'es',
+                'options' => ['placeholder' => 'Dictamen'],
+                'pluginOptions' => [
+                'allowClear' => true
+                ],
+                ]);
+                ?>
+            </div>
+            
+            <!-- <div class="col-md-4">
+                <? //=$form->field($model, 'txt_nombre_verificador_tea') ?>
+            </div>
+            
+            <div class="col-md-4">
+                <? //=$form->field($model, 'txt_clave_verificador_tea') ?>
+            </div>
+            
+            <div class="col-md-4">
+                <? //=$form->field($model, 'txt_nombre_completo_oficial') ?>
+            </div>
+            
+            <div class="col-md-4">
+                <? //=$form->field($model, 'data') ?>
+            </div> -->
+            
+            <div class="col-md-12">
+                <div class="form-group text-right">
+                <?= Html::resetButton('Restablecer', ['class' => 'btn btn-default']) ?>
+                <?= Html::submitButton('Buscar', ['class' => 'btn btn-primary']) ?>
+                </div>
+            </div>
 
-    <?= $form->field($model, 'txt_pais_procedencia')
-                    ->widget(Select2::classname(), [
-                        'data' => ArrayHelper::map($paises, 'txt_nombre', 'txt_nombre'),
-                        'language' => 'es',
-                        'options' => ['placeholder' => 'Seleccionar país'],
-                        'pluginOptions' => [
-                            'allowClear' => true
-                        ],
-                    ]);
-                ?> 
-
-    <?= $form->field($model, 'txt_tipo_mercancia')
-                    ->widget(Select2::classname(), [
-                        'data' => ArrayHelper::map($mercancias, 'txt_nombre', 'txt_nombre'),
-                        'language' => 'es',
-                        'options' => ['placeholder' => 'Seleccionar tipo de mercancia'],
-                        'pluginOptions' => [
-                            'allowClear' => true
-                        ],
-                    ]);
-                ?> 
-
-   
-    <?=$form->field($model, 'txt_cantidad') ?>
-
-    <?=$form->field($model, 'txt_unidad_medida') ?>
-
-    <?=$form->field($model, 'txt_descripcion_hechos') ?>
-
-
-    <?= $form->field($model, 'txt_detectado_por')
-                    ->widget(Select2::classname(), [
-                        'data' => ArrayHelper::map($detectados, 'txt_nombre', 'txt_nombre'),
-                        'language' => 'es',
-                        'options' => ['placeholder' => 'Detectado por'],
-                        'pluginOptions' => [
-                            'allowClear' => true
-                        ],
-                    ]);
-                ?> 
-    <?= $form->field($model, 'txt_dictamen')
-                    ->widget(Select2::classname(), [
-                        'data' => ArrayHelper::map($dictamenes, 'txt_nombre', 'txt_nombre'),
-                        'language' => 'es',
-                        'options' => ['placeholder' => 'Dictamen'],
-                        'pluginOptions' => [
-                            'allowClear' => true
-                        ],
-                    ]);
-                ?> 
-
-    <?=$form->field($model, 'txt_nombre_verificador_tea') ?>
-
-    <?=$form->field($model, 'txt_clave_verificador_tea') ?>
-
-    <?=$form->field($model, 'txt_nombre_completo_oficial') ?>
-
-    <?=$form->field($model, 'data') ?>
-
-    <div class="form-group">
-        <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
-    </div>
+        </div>
 
     <?php ActiveForm::end(); ?>
 

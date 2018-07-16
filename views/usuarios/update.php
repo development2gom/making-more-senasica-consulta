@@ -24,7 +24,7 @@ $usuario = EntUsuarios::getUsuarioLogueado();
 //     'template'=>'<li class="breadcrumb-item">{link}</li>', 
 //   ];
 $this->title = 'Editar usuario';
-$this->params['classBody'] = "site-navbar-small";
+$this->params['classBody'] = "site-navbar-small site-menubar-hide usuarios-create";
 
 $this->registerJsFile(
   '@web/webAssets/js/sign-up.js',
@@ -36,16 +36,17 @@ $this->registerCssFile(
   ['depends' => [\yii\web\JqueryAsset::className()]]
 );
 ?>
-<div class="panel panel-usuarios-editar">
-    <div class="panel-body">
-        <?= $this->render('_form', [
-          'model' => $model,
-          'roles' => $roles,
-          
-        ]) ?>
-    </div>
-</div>
+<h2 class="title-gral"><?= Html::encode($this->title) ?></h2>
 
+<div class="cont-create">
+
+    <?= $this->render('_form', [
+        'model' => $model,
+        'roles'=>$roles,
+        
+    ]) ?>
+
+</div>
 <?php
 if ($model->txt_auth_item == ConstantesWeb::SUPERVISOR) {
   echo $this->render("_view-usuarios-asignados", ['model' => $model, 'roles' => $roles]);

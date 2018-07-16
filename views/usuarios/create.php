@@ -22,8 +22,6 @@ use app\models\Constantes;
 //   ];
 
   $this->title = 'Agregar Usuario';
-  $this->params['classBody'] = "site-navbar-small";  
-
   $this->params['classBody'] = "site-navbar-small site-menubar-hide usuarios-create";
 
 
@@ -38,20 +36,15 @@ use app\models\Constantes;
   );
 ?>
 
-<div class="list-head">
+<h2 class="title-gral"><?= Html::encode($this->title) ?></h2>
 
-  
+<div class="cont-create">
 
-  </div>
+    <?= $this->render('_form', [
+        'model' => $model,
+        'roles'=>$roles,
+        
+    ]) ?>
 
-  <div class="panel panel-default">
-  <div class="panel-body">
-
-      <?= $this->render('_form', [
-          'model' => $model,
-          'roles'=>$roles,
-          
-      ]) ?>
-
-  </div>
 </div>
+

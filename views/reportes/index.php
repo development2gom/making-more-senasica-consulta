@@ -8,8 +8,7 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Exportar reportes';
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['classBody'] = "site-navbar-small site-menubar-hide reportes-create";
 ?>
-<div>
-    <?=$this->render('//actas-retencion/_search', ['model' => $searchModel]); ?>
-</div>    
+
+<?=$this->render('//actas-retencion/_search', ['model' => $searchModel]); ?>

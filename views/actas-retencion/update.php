@@ -5,12 +5,14 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\WrkActasRetencion */
 
-$this->title = 'Update Wrk Actas Retencion: {nameAttribute}';
-$this->params['breadcrumbs'][] = ['label' => 'Wrk Actas Retencions', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id_acta_retencion, 'url' => ['view', 'id' => $model->id_acta_retencion]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'Actualizar Acta de Retención: {nameAttribute}';
+$this->params['classBody'] = "site-navbar-small actas-retencion-create";
+
 ?>
-<div class="wrk-actas-retencion-update">
+
+<h2 class="title-gral"><?= Html::encode($this->title) ?></h2>
+
+<div class="cont-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

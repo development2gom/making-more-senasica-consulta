@@ -19,6 +19,20 @@
 		justify-content: space-between
 		margin-bottom: 32px
 		width: 100%
+		h2.title
+			@extend .fs-36
+			@extend .fw-regular
+			position: relative
+			text-transform: uppercase
+			&::before
+				content: " "
+				display: block
+				width: 35px
+				height: 5px
+				background-color: $c-red
+				position: absolute
+				bottom: -12px
+				left: 0
 		.list-actions
 			align-items: center
 			display: flex
@@ -66,6 +80,10 @@
 							padding: 8px 4px
 							text-decoration: none
 							text-transform: uppercase
+
+					td
+						select.form-control:not([size]):not([multiple])
+							height: 39px
 
 					// td
 					// 	input[type="text"],
@@ -189,7 +207,8 @@
 								.btn-edit,
 								.btn-view,
 								.btn-duplicar,
-								.btn-delete
+								.btn-delete,
+								.btn-aprobar
 									align-items: center
 									// background-color: transparent
 									// border-color: transparent
@@ -286,7 +305,7 @@
 								// 		color: $white
 
 						&.td-status
-							padding: 0
+							padding: 4px
 							+respond-to(lg)
 								width: 196px !important
 							+respond-to(md)
@@ -431,6 +450,7 @@
 
 						.empty
 							// background-color: red
-							@extend .fs-20
+							@extend .fs-24
 							@extend .fw-regular
+							padding: 12px 32px
 							text-align: center

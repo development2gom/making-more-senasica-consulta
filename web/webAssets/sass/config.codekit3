@@ -72,6 +72,13 @@
 		"oAP": "\/.sass-cache\/2546b73c6292af5fa41bbe6e3e5c7148d4ee91d8\/_variables.sassc",
 		"oF": 0
 		},
+	"\/.sass-cache\/2546b73c6292af5fa41bbe6e3e5c7148d4ee91d8\/_views.sassc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/.sass-cache\/2546b73c6292af5fa41bbe6e3e5c7148d4ee91d8\/_views.sassc",
+		"oF": 0
+		},
 	"\/.sass-cache\/2546b73c6292af5fa41bbe6e3e5c7148d4ee91d8\/site-extend.sassc": {
 		"cB": 0,
 		"ft": 8192,
@@ -359,8 +366,8 @@
 	},
 "projectAttributes": {
 	"creationDate": 553027814,
-	"displayValue": "sass",
-	"displayValueWasSetByUser": 0,
+	"displayValue": "Senesica - sass",
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-greg",
 	"iconImageWasSetByUser": 0
 	},

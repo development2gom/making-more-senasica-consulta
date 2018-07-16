@@ -34,7 +34,7 @@ $this->registerJsFile(
   <h2 class="title"><?=$this->title?></h2>
 
   <div class="list-actions">
-    <?= Html::a('<span><i class="icon wb-plus" aria-hidden="true"></i>Crear</span>', ['create'], ['class' => 'btn btn-primary btn-animate btn-animate-vertical']) ?>
+    <?= Html::a('<span><i class="icon wb-plus no-pjax" aria-hidden="true"></i>Crear</span>', ['create'], ['class' => 'btn btn-primary btn-animate btn-animate-vertical no-pjax']) ?>
   </div>
 
 </div>

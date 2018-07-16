@@ -50,20 +50,19 @@ role="navigation">
           <a class="nav-link no-pjax" href="<?=Url::base()?>/reportes">Reportes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link no-pjax" href="<?=Url::base()?>/actas-retencion">Actas</a>
+          <!-- <a class="nav-link no-pjax" href="<?=Url::base()?>/actas-retencion">Actas</a> -->
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="fade" role="button">Catalogos <i class="icon wb-chevron-down-mini" aria-hidden="true"></i></a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="exampleAlignmentDropdown" role="menu">
-            <a class="dropdown-item no-pjax" href="<?=Url::base()?>/usuarios" role="menuitem">Usuarios web</a>
-            <a class="dropdown-item no-pjax" href="<?=Url::base()?>/oficiales" role="menuitem">Oficiales</a>
-            
-          </div>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle no-pjax" data-toggle="dropdown" role="button" aria-expanded="false">Catálogos <span class="caret"></span></a>
+          <ul class="dropdown-menu no-pjax" role="menu">
+            <li><a class='no-pjax' href="<?=Url::base()?>/usuarios">Usuarios web</a></li>
+            <li><a class='no-pjax' href="<?=Url::base()?>/oficiales">Usuarios móviles</a></li>
+          </ul>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="<?=Url::base()?>/site/logout"><i class="icon wb-power" aria-hidden="true"></i> Logout</a>
+          <a class="nav-link no-pjax" href="<?=Url::base()?>/site/logout"><i class="icon wb-power no-pjax" aria-hidden="true"></i> Logout</a>
         </li>
         
       </ul>

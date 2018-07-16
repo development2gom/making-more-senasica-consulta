@@ -76,7 +76,7 @@ class EntUsuarios extends \yii\db\ActiveRecord
             'txt_auth_key' => 'Txt Auth Key',
             'txt_password_hash' => 'Txt Password Hash',
             'txt_password_reset_token' => 'Txt Password Reset Token',
-            'txt_email' => 'Email',
+            'txt_email' => 'USUARIO',
             'fch_creacion' => 'Fch Creacion',
             'fch_actualizacion' => 'Fch Actualizacion',
             'id_status' => 'Status',

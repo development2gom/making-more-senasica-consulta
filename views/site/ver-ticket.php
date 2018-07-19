@@ -12,7 +12,46 @@ $this->params['classBody'] = "site-navbar-small actas-retencion-view";
 
 <h2 class="title-gral"><?= Html::encode($this->title) ?></h2>
 
-<div class="cont-view">
+
+<table style="background-color: red; border: 1px solid #DDD;">
+    <tbody>
+        <tr>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>s</td>
+                        <td colspan="2">a</td>
+                    </tr>
+                </tbody>
+            </table>
+        </tr>
+
+        <tr>
+            <table>
+                <tbody>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </tr>
+
+        <tr>
+            <table>
+                <tbody>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </tr>
+
+        <tr>
+            <table>
+                <tbody>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </tr>
+    </tbody>
+</table>
+
 
     <p><span>Oficial:</span> <?=$model->oficial->nombreCompleto?></p>
     <p><span>Folio:</span> <?=$model->txt_folio?></p>

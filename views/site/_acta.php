@@ -9,17 +9,17 @@
 
                 <td>
                     
-                    <table cellpadding="0" cellspacing="0" style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: none; border-collapse: collapse; width: 100%;">
+                    <table cellpadding="0" cellspacing="0" style="border: 1px solid black; border-collapse: collapse; width: 100%;">
                         <tr>
-                            <td colspan="3" style="border: none; padding: 2px 8px;"></td>
-                            <td style="border: none; padding: 2px 8px 2px 0;">
-                                <strong style="font-size: 16px;">FOLIO: </strong>
-                                <span style="font-size: 15px; text-decoration: underline; text-transform: uppercase;"> 23g4234ghj23</span>
+                            <td colspan="3" style="border: none; padding: 8px;"></td>
+                            <td style="border: none; padding: 8px 8px 8px 0;">
+                                <strong style="font-size: 12px;">FOLIO: </strong>
+                                <span style="font-size: 13px; text-transform: uppercase;"> 23g4234ghj23</span>
                             </td>
                         </tr>
                         <tr>
-                            <td align="center" colspan="4" style="border: 1px solid black; border-top: none; padding: 2px 8px;">
-                                <h4 style="font-size: 18px; font-weight: bold; margin-top: 0; padding: 8px 0;">ACTA CIRCUNSTANCIADA</h4>
+                            <td align="center" colspan="4" style="border: 1px solid black; border-top: none; padding: 24px 8px;">
+                                <h4 style="font-size: 14px; font-weight: bold; margin-top: 0; padding: 8px 0;">ACTA CIRCUNSTANCIADA</h4>
                             </td>
                         </tr>
                         <tr>
@@ -76,7 +76,7 @@
 
                         <tr>
                             <td colspan="2" style="border-bottom: none; border-top: none; border-left: 1px solid black; border-right: 1px solid black; padding: 16px 12px 4px;">
-                                <h4 style="font-size: 18px; font-weight: bold; margin: 0;">ACTA</h4>
+                                <h4 style="font-size: 14px; font-weight: bold; margin: 0;">ACTA</h4>
                             </td>
                         </tr>
 
@@ -155,7 +155,7 @@
 
                         <tr>
                             <td style="border-bottom: 1px solid black; padding: 12px 8px;">
-                                <p style="font-size: 14px; letter-spacing: 1px; margin: 0;">
+                                <p style="font-size: 10px; letter-spacing: 1px; margin: 0;">
                                     <strong>Fundamento legal: </strong>
                                     Con fundamento en los artículos 1, 6 y 7 fracciones XIII, XVIII, XIX, XXI, XXVIII y XLI, 15, 19 Fracciones I, incisos e) l) y IV, 23, 24, 26, 27 A, 29, 30 
                                     <strong>fracción I</strong>, 46, 54 fracción III y 55 de la Ley Federal de Sanidad Vegetal; 1, 5, 6 fracciones I, II, III, IV, XI, XII, XIV, XX, XXII, LVII, LXIII y LXXI, 16 fracciones II, IV, VI, VII, VIII y XXI, 18, 24, 25, 26, 27, 32, 33, 35 fracciones I y IV, 36, 38, 39, 45 
@@ -185,25 +185,6 @@
 
             </tr>
 
-            <tr>
-                <td>
-                    <table cellpadding="0" cellspacing="0" style="border: 1px solid black; border-top: none; border-bottom: none; width: 100%;">
-                        <tr>
-                            <td style="height: 300px;"></td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-
-            <tr>
-
-                <td>
-
-                  
-
-                </td>
-
-            </tr>
 
         </tbody>
     </table>

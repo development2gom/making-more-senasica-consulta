@@ -67,7 +67,8 @@ class SiteController extends Controller
         // your html content input
         'content' => $content,  
         'options'=>[
-            "setAutoTopMargin"=>true,
+            "setAutoTopMargin"=>'stretch',
+            "autoMarginPadding"=>0,
             //"setAutoBottomMargin"=>true
         ],
         // format content from your own css file if needed or use the
@@ -80,28 +81,33 @@ class SiteController extends Controller
         }
         table{
             border-spacing: 0;
+            margin: 0;
             width: 100%;
+        }
+        table tr td,
+        table tr th{
+            font-size: 12px;
         }', 
          // set mPDF properties on the fly
         //'options' => ['title' => 'Krajee Report Title'],
          // call mPDF methods on the fly
          
         'methods' => [ 
-          'SetHeader'=>['<table cellpadding="0" cellspacing="0" style="border-left: 1px solid black; border-top: 1px solid black; border-right: 1px solid black; border-bottom: none; border-collapse: collapse; width: 100%;">
+          'SetHeader'=>['<table cellpadding="0" cellspacing="0" style="border-left: 1px solid black; border-top: 1px solid black; border-right: 1px solid black; border-bottom: none; border-collapse: collapse; margin: 0; width: 100%;">
           <tr>
               <td align="left" style="padding: 8px 12px;">
-                  <img src="https://dev.2geeksonemonkey.com/senasica/admin/web/webAssets/images/logo-sagarpa-horizontal.png" width="224" alt="Sagarpa">
+                  <img src="https://dev.2geeksonemonkey.com/senasica/admin/web/webAssets/images/logo-sagarpa-horizontal.png" width="140" alt="Sagarpa">
               </td>
               <td align="right" style="padding: 8px 12px;">
-                  <img src="https://dev.2geeksonemonkey.com/senasica/admin/web/webAssets/images/logo-senasica-horizontal.png" width="160" alt="Senasica">
+                  <img src="https://dev.2geeksonemonkey.com/senasica/admin/web/webAssets/images/logo-senasica-horizontal.png" width="130" alt="Senasica">
               </td>
           </tr>
 
           <tr>
               <td align="center" colspan="2" style="padding: 24px 0;">
-                  <h1 style="font-size: 18px; font-style: italic; font-weight: bold; margin-bottom: 4px; margin-top: 0; text-transform: uppercase;">Secretaría de Agricultura, Ganadería, Desarrollo Rural, Pesca y Alimentación</h1>
-                  <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 4px; margin-top: 0; text-transform: uppercase;">Servicio Nacional de Sanidad inocuidad y Calidad Agroalimentaria</h2>
-                  <h3 style="font-size: 18px; font-weight: bold; margin-top: 0; text-transform: uppercase;">Dirección General de inspección Fitozoosanitaria</h3>
+                  <h1 style="font-size: 13px; font-style: italic; font-weight: bold; margin-bottom: 8px; margin-top: 0; text-transform: uppercase;">Secretaría de Agricultura, Ganadería, Desarrollo Rural, Pesca y Alimentación</h1>
+                  <h2 style="font-size: 13px; font-weight: bold; margin-bottom: 8px; margin-top: 0; text-transform: uppercase;">Servicio Nacional de Sanidad inocuidad y Calidad Agroalimentaria</h2>
+                  <h3 style="font-size: 13px; font-weight: bold; margin-top: 0; text-transform: uppercase;">Dirección General de inspección Fitozoosanitaria</h3>
               </td>
           </tr>
 

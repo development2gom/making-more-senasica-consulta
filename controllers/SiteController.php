@@ -69,7 +69,7 @@ class SiteController extends Controller
         'options'=>[
             "setAutoTopMargin"=>'stretch',
             "autoMarginPadding"=>0,
-            //"setAutoBottomMargin"=>true
+            // "setAutoBottomMargin"=>true,
         ],
         // format content from your own css file if needed or use the
         // enhanced bootstrap css built by Krajee for mPDF formatting 
@@ -112,8 +112,7 @@ class SiteController extends Controller
           </tr>
 
       </table>'], 
-          'SetFooter'=>['
-          <table cellpadding="0" cellspacing="0" style="border: 1px solid black; border-top: none; border-bottom-color: black; width: 100%;">
+          'SetFooter'=>['<table cellpadding="0" cellspacing="0" style="border: 1px solid black; border-top: none; border-bottom-color: black; width: 100%;">
           <tr>
               <td style="padding: 12px 8px;">
                   <strong style="display: block;">Cadena original. Información del documento oficial que presenta que declara:</strong>
@@ -127,7 +126,7 @@ class SiteController extends Controller
               </td>
           </tr>
       </table>{PAGENO}'],
-        ]
+        ],
     ]);
     
     // return the pdf output as per the destination setting

@@ -107,7 +107,7 @@
                                             <td style="border: 1px solid black; padding: 12px 8px; text-align: center;">CABEZAS</td>
                                             <td style="border: 1px solid black; padding: 12px 8px; text-align: center;">OBSERVACION DIRECTA</td>
                                             <td style="border: 1px solid black; padding: 12px 8px; text-align: center;">HECTOR LOPEZ DAVALOS</td>
-                                            <td style="border: 1px solid black; padding: 12px 8px; text-align: center;">N/A</td>
+                                            <td style="border: 1px solid black; padding: 12px 8px; text-align: center;">TEA-160516-15-IMTN-166</td>
                                         </tr>
                                     </tbody>
                                 </table>

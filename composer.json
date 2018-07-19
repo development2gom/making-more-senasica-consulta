@@ -21,12 +21,12 @@
         "kartik-v/yii2-widget-select2": "@dev",
         "kop/yii2-scroll-pager": "dev-master",
         "kartik-v/yii2-grid": "@dev",
-        "kartik-v/yii2-mpdf": "^1.0",
         "johnitvn/yii2-ajaxcrud": "*",
         "kartik-v/yii2-export": "*",
         "consik/yii2-websocket": "^1.0",
         "kartik-v/yii2-widget-datepicker": "@dev",
-        "kartik-v/yii2-field-range": "dev-master"
+        "kartik-v/yii2-field-range": "dev-master",
+        "mpdf/mpdf": "^7.1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

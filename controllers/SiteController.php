@@ -13,6 +13,7 @@ use app\components\AccessControlExtend;
 use app\models\WrkActasRetencion;
 use yii\web\HttpException;
 use kartik\mpdf\Pdf;
+use Mpdf\Mpdf;
 
 class SiteController extends Controller
 {
@@ -49,6 +50,20 @@ class SiteController extends Controller
 
     }
 
+    public function actionDownload2(){
+        $mpdf = new Mpdf();
+        $mpdf->setAutoTopMargin= "stretch";
+            
+        $mpdf->autoMarginPadding = "0";
+        $mpdf->autoPageBreak = true;
+        $mpdf->SetHTMLFooter("hola", "E");
+        $mpdf->marginFooter = 0;
+       
+        $mpdf->WriteHTML($this->renderPartial('_acta'));
+        $mpdf->Output();
+        exit;
+    }
+
     public function actionDownload(){
 
         // get your HTML raw content without any layouts or scripts
@@ -67,7 +82,14 @@ class SiteController extends Controller
         // your html content input
         'content' => $content,  
         'options'=>[
-            "setAutoTopMargin"=>true,
+            "setAutoTopMargin"=>"stretch",
+            
+            "autoMarginPadding"=>0,
+            'autoPageBreak'=>true,
+            
+            "SetHTMLFooter"=>["hola", "E"],
+            "marginFooter"=>0
+            
             //"setAutoBottomMargin"=>true
         ],
         // format content from your own css file if needed or use the
@@ -106,21 +128,7 @@ class SiteController extends Controller
           </tr>
 
       </table>'], 
-          'SetFooter'=>['
-          <table cellpadding="0" cellspacing="0" style="border: 1px solid black; border-top: none; border-bottom-color: black; width: 100%;">
-          <tr>
-              <td style="padding: 12px 8px;">
-                  <strong style="display: block;">Cadena original. Información del documento oficial que presenta que declara:</strong>
-                  <span style="display: block; font-size: 11px;">|LODH660920CZ6|ACTA DE RETENCIÓN|AR012018190556|AICM Sala E Internacional DF, Ciudad de México|22/05/2018|ANIMAL|Destruccion|HECTOR LOPEZ DAVALOS|MULTIPLE|APS012018365434|VARIOS DESCONOCIDO DESCONOCIDO|DESCONOCIDO|CABEZAS|LODH660920CZ6|HECTOR LOPEZ DAVALOS|2018-05-22|</span>
-              </td>
-          </tr>
-          <tr>
-              <td style="padding: 12px 8px;">
-                  <strong style="display: block;">Sello digital del autorizador del documento oficial:</strong>
-                  <span style="display: block; font-size: 11px;">LMzlEfeqflT5ZqOHjDaxQehOKcqai1/IjBvFtX1oYAahW6MfYx+PKwsPvda+y3R6UimLMZ0pREDcZBB0w+Yg0nVw8GCBzzuQ9nVCYO2W16Cb8yTlvMpbOSXYxqoKxd2mLOW5DLp++J6u/r0d2oYH7d/tOeVfRoJnAWgnymvNq9YdY8uD1BQPmuKqOWfbJwJ Qb72gIuxDZk+U6HfsMpaPfSt+Hayv1IW7zA56sVi/sV2QXO6BJh8t9f08qGmHRWJif8WGaxy/oqVoUR6z4BxawYmyaLSRF2V7BKuDkhEDJpnNWpFQGwnxidPT0xvrLXbrko7TuYAr2MF9tQA0UwuJ1w==</span>
-              </td>
-          </tr>
-      </table>{PAGENO}'],
+         
         ]
     ]);
     

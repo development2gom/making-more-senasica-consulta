@@ -1,7 +1,7 @@
 
 <body>
 
-    <table cellpadding="0" cellspacing="0" style="background-color: white; border: none; width: 100%;">
+    <table cellpadding="0" cellspacing="0" style="background-color: white;  width: 100%;">
         <tbody>
                   
 
@@ -185,25 +185,9 @@
 
             </tr>
 
-            <tr>
-                <td>
-                    <table cellpadding="0" cellspacing="0" style="border: 1px solid black; border-top: none; border-bottom: none; width: 100%;">
-                        <tr>
-                            <td style="height: 300px;"></td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
+           
 
-            <tr>
-
-                <td>
-
-                  
-
-                </td>
-
-            </tr>
+           
 
         </tbody>
     </table>

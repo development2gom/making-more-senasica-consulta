@@ -1,4 +1,8 @@
+<?php
 
+use app\models\Calendario;
+
+?>
 <body>
 
     <table cellpadding="0" cellspacing="0" style="background-color: white;  width: 100%;">
@@ -26,48 +30,48 @@
                             <td colspan="2" style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
                                 <strong style="display: block;">OISA en: </strong>
                                 <br>
-                                <span style="display: block;"> AICM Sala E Internacional DF. Ciudad de México</span>
+                                <span style="display: block;"> <?=$acta->txt_oficina?></span>
                             </td>
                             <td style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
                                 <strong style="display: block;">Fecha: </strong>
                                 <br>
-                                <span style="display: block;"> 22/05/2018</span>
+                                <span style="display: block;"> <?=Calendario::getDateComplete($acta->txt_fecha)?></span>
                             </td>
                             <td style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
                                 <strong style="display: block;">Hora: </strong>
                                 <br>
-                                <span style="display: block;"> 0:56 PM</span>
+                                <span style="display: block;"> <?=Calendario::getHoursMinutes($acta->txt_fecha)?></span>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3" style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
                                 <strong style="display: block;">Nombre del representante o particular: </strong>
                                 <br>
-                                <span style="display: block;"> VARIOS DESCONOCIDO DESCONOCIDO</span>
+                                <span style="display: block;"><?=$acta->txt_nombre." ".$acta->txt_apellido_paterno." ".$acta->txt_apellido_materno?></span>
                             </td>
                             <td style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
                                 <strong style="display: block;">Identificación: </strong>
                                 <br>
-                                <span style="display: block;"> PASARPORTE: G00000001</span>
+                                <span style="display: block;"> <?=$acta->txt_tipo_identificacion?>: <?=$acta->txt_numero_identificacion?></span>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="4" style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
                                 <strong style="display: block;">Información complementaría: (Domicilio, CP.) </strong>
                                 <br>
-                                <span style="display: block;"> VARIOS</span>
+                                <span style="display: block;"> <?=$acta->txt_calle?> <?=$acta->txt_numero?> <?=$acta->txt_municipio?> <?=$acta->txt_estado?></span>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3" style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
                                 <strong style="display: block;">Nombre del oficial: </strong>
                                 <br>
-                                <span style="display: block;"> HECTOR LOPEZ DAVALOS</span>
+                                <span style="display: block;"> <?=$acta->txt_nombre_completo_oficial?></span>
                             </td>
                             <td style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
                                 <strong style="display: block;">No. de credencial: </strong>
                                 <br>
-                                <span style="display: block;"> 331/14</span>
+                                <span style="display: block;"> No existe información</span>
                             </td>
                         </tr>
                     </table>
@@ -107,15 +111,15 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">APS343432424324</td>
-                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">Cualquiera</td>
-                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">Cualquiera</td>
-                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">DESCONOCIDO</td>
-                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">1.0</td>
-                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">CABEZAS</td>
-                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">OBSERVACION DIRECTA</td>
-                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">HECTOR LOPEZ DAVALOS</td>
-                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">TEA-160516-15-IMTN-166</td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;"><?=$acta->txt_folio?></td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;"><?=$acta->txt_pais_origen?></td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;"><?=$acta->txt_pais_procedencia?></td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;"><?=$acta->txt_tipo_mercancia?></td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;"><?=$acta->txt_cantidad?></td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;"><?=$acta->txt_unidad_medida?></td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;"><?=$acta->txt_detectado_por?></td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;"><?=$acta->txt_dictamen?></td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;"><?=$acta->txt_clave_verificador_tea?></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -126,7 +130,7 @@
                         <tr>
                             <td colspan="2" style="border-bottom: none; border-top-color: transparent; border-left: 1px solid black; border-right: 1px solid black; padding: 4px 12px 24px;">
                                 <strong>Para su: </strong>
-                                <span>Destrucción</span>
+                                <span><?=$acta->txt_dictamen?></span>
                             </td>
                         </tr>
                         
@@ -157,7 +161,7 @@
                         <tr>
                             <td style="border-bottom: 1px solid black; padding: 4px 8px;">
                                 <strong>MOTIVO: </strong>
-                                <span>PRUEBA</span>
+                                <span>No existe información</span>
                             </td>
                         </tr>
 
@@ -176,14 +180,14 @@
                         <tr>
                             <td style="border-bottom: 1px solid black; padding: 4px 8px;">
                                 <strong>DESCRIPCIÓN DE HECHOS: </strong>
-                                <span>PRUEBA</span>
+                                <span><?=$acta->txt_descripcion_hechos?></span>
                             </td>
                         </tr>
 
                         <tr>
                             <td style="padding: 4px 8px;">
                                 <strong>OBSERVACIONES: </strong>
-                                <span>PRUEBA</span>
+                                <span>No existe información</span>
                             </td>
                         </tr>
 
@@ -218,12 +222,13 @@
                         <tr>
                             <td style="padding: 4px 8px;" width="5%"></td>
                             <td style="padding: 4px 8px; text-align: center;" width="35%">
-                                <span style="display: block; font-weight: 400; text-transform: uppecarse;">Hector Lopez Davalos</p>
+                                <span style="display: block; font-weight: 400; text-transform: uppecarse;">No existe</p>
                                 <hr style="background-color: black; border: none; height: 2px; margin-top: 50px; width: 100%;">
                                 <p style="font-weight: 300; text-transform: uppecarse;">TESTIGO</p>
                             </td>
                             <td style="padding: 4px 8px;" width="20%"></td>
                             <td style="padding: 4px 8px; text-align: center;" width="35%">
+                            <span style="display: block; font-weight: 400; text-transform: uppecarse;">No existe</p>
                                 <hr style="background-color: transparent; border: none; border-bottom: 1px solid black; height: 2px; margin-top: 70px; width: 100%;">
                                 <p style="font-weight: 300; text-transform: uppecarse;">TESTIGO</p>
                             </td>

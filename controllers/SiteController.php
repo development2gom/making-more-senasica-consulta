@@ -14,6 +14,7 @@ use app\models\WrkActasRetencion;
 use yii\web\HttpException;
 use kartik\mpdf\Pdf;
 use Mpdf\Mpdf;
+use app\models\EntEfirmas;
 
 class SiteController extends Controller
 {
@@ -42,6 +43,8 @@ class SiteController extends Controller
             throw new HttpException(404, "No se encontro el acta");
         }
 
+        $firma = EntEfirmas::find()->where(["id_acta_retencion"=>$acta->id_acta_retencion])->one();
+
         // get your HTML raw content without any layouts or scripts
         $content = $this->renderPartial('_acta', ["acta"=>$acta]);
         
@@ -64,7 +67,7 @@ class SiteController extends Controller
                 "setAutoTopMargin"=>'stretch',
                 "autoMarginPadding"=>0,
                
-                "setAutoBottomMargin"=>"stretch",
+                
                 
             ],
 
@@ -106,22 +109,9 @@ class SiteController extends Controller
 
         </table>'], 
             
-            'SetFooter'=>['<table cellpadding="0" cellspacing="0" style="border:1px solid black;border-top:none;border-bottom-color:black;width:100%;">
-                                <tr>
-                                    <td style="padding:12px 8px;">
-                                        <strong style="display:block;">Cadena original. Información del documento oficial que presenta que declara:</strong>
-                                        <span style="display:block;font-size:11px;">
-                                        folio=1BIH3I158JE3VF15|fecha=2018/07/18 16:53|oficina=AICM TERMINAL 2, CDMX|tipoDentificacion=INE|numeroIdentificacion=hd|nombre=Faf|apellidoPaterno=Dafw|apellidoMaterno=C|nacionalidad=Mexicano|correoElectronico=ahdja|estado=Aguascalientes|municipio=Naucalpan|calle=HDM|numero=Hfk|tipoActa=Zoosanitaria|paisOrigen=Afganistán|paisProcedencia=Afganistán|tipoMercancia=Animales vivos|cantidad=5586|unidadMedida=Kilogramo|descripcionHechos=hd|detectadoPor=Policia federal preventiva|dictamen=Acondicionamiento|nombreVerificadorTFA=ALFREDO RAMÍREZ SERRANO|claveVerificadorTFA=TEA|nombreCompletoOficial=ALFREDO RAMÍREZ SERRANO
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 12px 8px;">
-                                        <strong style="display: block;">Sello digital del autorizador del documento oficial:</strong>
-                                        <span style="display: block; font-size: 11px;">LMzlEfeqflT5ZqOHjDaxQehOKcqai1/IjBvFtX1oYAahW6MfYx+PKwsPvda+y3R6UimLMZ0pREDcZBB0w+Yg0nVw8GCBzzuQ9nVCYO2W16Cb8yTlvMpbOSXYxqoKxd2mLOW5DLp++J6u/r0d2oYH7d/tOeVfRoJnAWgnymvNq9YdY8uD1BQPmuKqOWfbJwJ Qb72gIuxDZk+U6HfsMpaPfSt+Hayv1IW7zA56sVi/sV2QXO6BJh8t9f08qGmHRWJif8WGaxy/oqVoUR6z4BxawYmyaLSRF2V7BKuDkhEDJpnNWpFQGwnxidPT0xvrLXbrko7TuYAr2MF9tQA0UwuJ1w==</span>
-                                    </td>
-                                </tr>
-                            </table>'],
+            'SetFooter'=>['<p style="font-size: 7px">'.$firma->txt_cadena_original.'</p>
+                                       
+            <p style="font-size: 7px">'.$firma->txt_certificado.'</p>'],
             ],
         ]);
     

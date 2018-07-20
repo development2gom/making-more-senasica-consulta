@@ -15,14 +15,14 @@ use app\models\Calendario;
                     
                     <table cellpadding="0" cellspacing="0" style="border: 1px solid black; border-collapse: collapse; width: 100%;">
                         <tr>
-                            <td colspan="3" style="border: none; padding: 8px;"></td>
-                            <td style="border: none; padding: 8px 8px 8px 0;">
+                            <td colspan="3" style="border: none; padding: 8px 8px 2px;"></td>
+                            <td style="border: none; padding: 8px 8px 2px 0;">
                                 <strong style="font-size: 12px;">FOLIO: </strong>
                                 <span style="font-size: 13px; text-transform: uppercase;"> <?=$acta->txt_folio?></span>
                             </td>
                         </tr>
                         <tr>
-                            <td align="center" colspan="4" style="border: 1px solid black; border-top: none; padding: 24px 8px;">
+                            <td align="center" colspan="4" style="border: 1px solid black; border-top: none; padding: 4px 8px 8px;">
                                 <h4 style="font-size: 14px; font-weight: bold; margin-top: 0; padding: 8px 0;">ACTA CIRCUNSTANCIADA</h4>
                             </td>
                         </tr>

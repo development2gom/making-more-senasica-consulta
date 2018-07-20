@@ -109,9 +109,9 @@ class SiteController extends Controller
 
         </table>'], 
             
-            'SetFooter'=>['<p style="font-size: 7px">'.$firma->txt_cadena_original.'</p>
+            'SetFooter'=>['<div style="text-align: left; width: 100%;"><strong style="font-size: 7px; font-style: normal;">Cadena original. Información del documento oficial que presenta que declara:</strong><br><p style="font-size: 6px; font-style: normal; font-weight: 300;">'.$firma->txt_cadena_original.'</p>
                                        
-            <p style="font-size: 7px">'.$firma->txt_certificado.'</p>'],
+            <br><strong style="font-size: 7px; font-style: normal;">Sello digital del autorizador del documento oficial:</strong><br><p style="font-size: 6px; font-style: normal; font-weight: 300;">'.$firma->txt_certificado.'</p></div>'],
             ],
         ]);
     

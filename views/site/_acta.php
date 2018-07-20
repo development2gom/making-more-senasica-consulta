@@ -24,41 +24,49 @@
                         </tr>
                         <tr>
                             <td colspan="2" style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
-                                <strong style="display: block;">OISA en: </strong><br>
+                                <strong style="display: block;">OISA en: </strong>
+                                <br>
                                 <span style="display: block;"> AICM Sala E Internacional DF. Ciudad de México</span>
                             </td>
                             <td style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
                                 <strong style="display: block;">Fecha: </strong>
+                                <br>
                                 <span style="display: block;"> 22/05/2018</span>
                             </td>
                             <td style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
                                 <strong style="display: block;">Hora: </strong>
+                                <br>
                                 <span style="display: block;"> 0:56 PM</span>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3" style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
                                 <strong style="display: block;">Nombre del representante o particular: </strong>
+                                <br>
                                 <span style="display: block;"> VARIOS DESCONOCIDO DESCONOCIDO</span>
                             </td>
                             <td style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
                                 <strong style="display: block;">Identificación: </strong>
+                                <br>
                                 <span style="display: block;"> PASARPORTE: G00000001</span>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="4" style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
                                 <strong style="display: block;">Información complementaría: (Domicilio, CP.) </strong>
+                                <br>
                                 <span style="display: block;"> VARIOS</span>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3" style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
                                 <strong style="display: block;">Nombre del oficial: </strong>
+                                <br>
                                 <span style="display: block;"> HECTOR LOPEZ DAVALOS</span>
                             </td>
                             <td style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
                                 <strong style="display: block;">No. de credencial: </strong>
+                                <br>
                                 <span style="display: block;"> 331/14</span>
                             </td>
                         </tr>
@@ -81,33 +89,33 @@
                         </tr>
 
                         <tr>
-                            <td colspan="2" style="border-bottom: none; border-top-color: transparent; border-left: 1px solid black; border-right: 1px solid black; padding: 4px 12px 24px;">
+                            <td colspan="2" style="border-bottom: none; border-top-color: transparent; border-left: 1px solid black; border-right: 1px solid black; padding: 4px 6px 24px;">
 
                                 <table cellpadding="0" cellspacing="0" style="border: 1px solid black; width: 100%;">
                                     <thead>
                                         <tr>
-                                            <th style="border: 1px solid black; padding: 12px 8px; text-align: center;">Folio:</th>
-                                            <th style="border: 1px solid black; padding: 12px 8px; text-align: center;">País de origen:</th>
-                                            <th style="border: 1px solid black; padding: 12px 8px; text-align: center;">País de procedencia:</th>
-                                            <th style="border: 1px solid black; padding: 12px 8px; text-align: center;">Mercancía:</th>
-                                            <th style="border: 1px solid black; padding: 12px 8px; text-align: center;">Cantidad:</th>
-                                            <th style="border: 1px solid black; padding: 12px 8px; text-align: center;">Unidad de medida:</th>
-                                            <th style="border: 1px solid black; padding: 12px 8px; text-align: center;">Detectado por:</th>
-                                            <th style="border: 1px solid black; padding: 12px 8px; text-align: center;">Dictaminadi por:</th>
-                                            <th style="border: 1px solid black; padding: 12px 8px; text-align: center;">Clave TEA:</th>
+                                            <th style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">Folio:</th>
+                                            <th style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">País de origen:</th>
+                                            <th style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">País de procedencia:</th>
+                                            <th style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">Mercancía:</th>
+                                            <th style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">Cantidad:</th>
+                                            <th style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">Unidad de medida:</th>
+                                            <th style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">Detectado por:</th>
+                                            <th style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">Dictaminado por:</th>
+                                            <th style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">Clave TEA:</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td style="border: 1px solid black; padding: 12px 8px; text-align: center;">APS343432424324</td>
-                                            <td style="border: 1px solid black; padding: 12px 8px; text-align: center;">Cualquiera</td>
-                                            <td style="border: 1px solid black; padding: 12px 8px; text-align: center;">Cualquiera</td>
-                                            <td style="border: 1px solid black; padding: 12px 8px; text-align: center;">DESCONOCIDO</td>
-                                            <td style="border: 1px solid black; padding: 12px 8px; text-align: center;">1.0</td>
-                                            <td style="border: 1px solid black; padding: 12px 8px; text-align: center;">CABEZAS</td>
-                                            <td style="border: 1px solid black; padding: 12px 8px; text-align: center;">OBSERVACION DIRECTA</td>
-                                            <td style="border: 1px solid black; padding: 12px 8px; text-align: center;">HECTOR LOPEZ DAVALOS</td>
-                                            <td style="border: 1px solid black; padding: 12px 8px; text-align: center;">TEA-160516-15-IMTN-166</td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">APS343432424324</td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">Cualquiera</td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">Cualquiera</td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">DESCONOCIDO</td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">1.0</td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">CABEZAS</td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">OBSERVACION DIRECTA</td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">HECTOR LOPEZ DAVALOS</td>
+                                            <td style="border: 1px solid black; font-size: 10px; padding: 12px 8px; text-align: center;">TEA-160516-15-IMTN-166</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -155,7 +163,7 @@
 
                         <tr>
                             <td style="border-bottom: 1px solid black; padding: 12px 8px;">
-                                <p style="font-size: 10px; letter-spacing: 1px; margin: 0;">
+                                <p style="font-size: 7px; letter-spacing: 1px; margin: 0;">
                                     <strong>Fundamento legal: </strong>
                                     Con fundamento en los artículos 1, 6 y 7 fracciones XIII, XVIII, XIX, XXI, XXVIII y XLI, 15, 19 Fracciones I, incisos e) l) y IV, 23, 24, 26, 27 A, 29, 30 
                                     <strong>fracción I</strong>, 46, 54 fracción III y 55 de la Ley Federal de Sanidad Vegetal; 1, 5, 6 fracciones I, II, III, IV, XI, XII, XIV, XX, XXII, LVII, LXIII y LXXI, 16 fracciones II, IV, VI, VII, VIII y XXI, 18, 24, 25, 26, 27, 32, 33, 35 fracciones I y IV, 36, 38, 39, 45 

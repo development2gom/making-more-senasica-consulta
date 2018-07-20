@@ -14,7 +14,7 @@
                             <td colspan="3" style="border: none; padding: 8px;"></td>
                             <td style="border: none; padding: 8px 8px 8px 0;">
                                 <strong style="font-size: 12px;">FOLIO: </strong>
-                                <span style="font-size: 13px; text-transform: uppercase;"> 23g4234ghj23</span>
+                                <span style="font-size: 13px; text-transform: uppercase;"> <?=$acta->txt_folio?></span>
                             </td>
                         </tr>
                         <tr>
@@ -24,7 +24,7 @@
                         </tr>
                         <tr>
                             <td colspan="2" style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
-                                <strong style="display: block;">OISA en: </strong>
+                                <strong style="display: block;">OISA en: </strong><br>
                                 <span style="display: block;"> AICM Sala E Internacional DF. Ciudad de México</span>
                             </td>
                             <td style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">

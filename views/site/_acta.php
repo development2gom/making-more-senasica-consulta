@@ -185,6 +185,49 @@
 
             </tr>
 
+            <tr>
+
+                <td>
+
+                    <table cellpadding="0" cellspacing="0" style="border: none; width: 100%;">
+                        <tr>
+                            <td colspan="5" style="padding: 4px 8px; 80px 8px;">
+                                <strong>Para constancia de los hechos se levanta la presente que firman de conformidad las personas que en esta intervienen</strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="5">
+                                <p style="background-color: teal; width: 100%"><br></p>
+                                <p style="background-color: teal; width: 100%"><br></p>
+                                <p style="background-color: teal; width: 100%"><br></p>
+                                <p style="background-color: teal; width: 100%"><br></p>
+                                <p style="background-color: teal; width: 100%"><br></p>
+                                <p style="background-color: teal; width: 100%"><br></p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding: 4px 8px;" width="5%"></td>
+                            <td style="padding: 4px 8px; text-align: center;" width="35%">
+                                <span style="display: block; font-weight: 400; text-transform: uppecarse;">Hector Lopez Davalos</p>
+                                <hr style="background-color: black; border: none; height: 2px; margin-top: 50px; width: 100%;">
+                                <p style="font-weight: 300; text-transform: uppecarse;">TESTIGO</p>
+                            </td>
+                            <td style="padding: 4px 8px;" width="20%"></td>
+                            <td style="padding: 4px 8px; text-align: center;" width="35%">
+                                <hr style="background-color: transparent; border: none; border-bottom: 1px solid black; height: 2px; margin-top: 70px; width: 100%;">
+                                <p style="font-weight: 300; text-transform: uppecarse;">TESTIGO</p>
+                            </td>
+                            <td style="padding: 4px 8px;" width="5%"></td>
+                        </tr>
+
+                    </table>
+
+                </td>
+
+            </tr>
+
 
         </tbody>
     </table>

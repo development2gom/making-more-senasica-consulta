@@ -65,6 +65,7 @@ class SiteController extends Controller
             'marginRight'=>5,
             'options'=>[
                 "setAutoTopMargin"=>'stretch',
+                "setAutoBottomMargin"=>'stretch',
                 "autoMarginPadding"=>0,
                
                 

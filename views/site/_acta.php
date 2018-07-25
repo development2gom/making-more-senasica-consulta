@@ -247,7 +247,7 @@ use app\models\Calendario;
     <table>
         <tr>
             <?php
-            foreach($acta->imagenes as $imagen){
+            foreach($acta->entImagenes as $imagen){
             ?>
             <td><img src="https://dev.2geeksonemonkey.com/senasica/api/web/fotografias/<?=$imagen->txt_url?>'"/></td>
             <?php

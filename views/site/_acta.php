@@ -187,7 +187,7 @@ use app\models\Calendario;
                         <tr>
                             <td style="padding: 4px 8px;">
                                 <strong>OBSERVACIONES: </strong>
-                                <span>No existe información</span>
+                                <span><?=$acta->txt_observaciones?></span>
                             </td>
                         </tr>
 
@@ -222,13 +222,13 @@ use app\models\Calendario;
                         <tr>
                             <td style="padding: 4px 8px;" width="5%"></td>
                             <td style="padding: 4px 8px; text-align: center;" width="35%">
-                                <span style="display: block; font-weight: 400; text-transform: uppecarse;">No existe</p>
+                                <span style="display: block; font-weight: 400; text-transform: uppecarse;"><?=$acta->txt_nombre_testigo_1?></p>
                                 <hr style="background-color: black; border: none; height: 2px; margin-top: 50px; width: 100%;">
-                                <p style="font-weight: 300; text-transform: uppecarse;">TESTIGO</p>
+                                <p style="font-weight: 300; text-transform: uppecarse;">TESTIGO </p>
                             </td>
                             <td style="padding: 4px 8px;" width="20%"></td>
                             <td style="padding: 4px 8px; text-align: center;" width="35%">
-                            <span style="display: block; font-weight: 400; text-transform: uppecarse;">No existe</p>
+                            <span style="display: block; font-weight: 400; text-transform: uppecarse;"><?=$acta->txt_nombre_testigo_2?></p>
                                 <hr style="background-color: transparent; border: none; border-bottom: 1px solid black; height: 2px; margin-top: 70px; width: 100%;">
                                 <p style="font-weight: 300; text-transform: uppecarse;">TESTIGO</p>
                             </td>
@@ -243,6 +243,17 @@ use app\models\Calendario;
 
 
         </tbody>
+    </table>
+    <table>
+        <tr>
+            <?php
+            foreach($acta->imagenes as $imagen){
+            ?>
+            <td><img src="https://dev.2geeksonemonkey.com/senasica/api/web/fotografias/<?=$imagen->txt_url?>'"/></td>
+            <?php
+            }
+            ?>
+        </tr>
     </table>
     
 </body>

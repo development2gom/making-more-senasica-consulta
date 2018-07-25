@@ -243,12 +243,12 @@ use app\models\Calendario;
 
         </tbody>
     </table>
-    <table>
+    <table cellpadding="0" cellspacing="0" style="border: none; width: 100%;">
         <tr>
             <?php
             foreach($acta->entImagenes as $imagen){
             ?>
-            <td><img src="https://dev.2geeksonemonkey.com/senasica/api/web/fotografias/<?=$imagen->txt_url?>'"/></td>
+            <td><img style="max-width=100%" width="100%" src="https://dev.2geeksonemonkey.com/senasica/api/web/<?=$imagen->txt_url?>"/></td>
             <?php
             }
             ?>

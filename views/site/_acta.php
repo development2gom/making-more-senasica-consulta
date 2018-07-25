@@ -7,8 +7,7 @@ use app\models\Calendario;
 
     <table cellpadding="0" cellspacing="0" style="background-color: white;  width: 100%;">
         <tbody>
-                  
-
+        
             <tr>
 
                 <td>

@@ -70,7 +70,7 @@ use app\models\Calendario;
                             <td style="border: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 2px 8px;">
                                 <strong style="display: block;">No. de credencial: </strong>
                                 <br>
-                                <span style="display: block;"> No existe información</span>
+                                <span style="display: block;"> <?=$acta->txt_numero_credencial?></span>
                             </td>
                         </tr>
                     </table>
@@ -160,7 +160,7 @@ use app\models\Calendario;
                         <tr>
                             <td style="border-bottom: 1px solid black; padding: 4px 8px;">
                                 <strong>MOTIVO: </strong>
-                                <span>No existe información</span>
+                                <span><?=$acta->txt_motivo?></span>
                             </td>
                         </tr>
 
@@ -220,12 +220,30 @@ use app\models\Calendario;
 
                         <tr>
                             <td style="padding: 4px 8px;" width="5%"></td>
-                            <td style="padding: 4px 8px; text-align: center;" width="35%">
-                                <span style="display: block; font-weight: 400; text-transform: uppecarse;"><?=$acta->txt_nombre_testigo_1?></p>
-                                <hr style="background-color: black; border: none; height: 2px; margin-top: 50px; width: 100%;">
-                                <p style="font-weight: 300; text-transform: uppecarse;">TESTIGO </p>
-                            </td>
-                            <td style="padding: 4px 8px;" width="20%"></td>
+                            <?php
+                            foreach($acta->entFirmasImagenes as $firma){
+                                if($acta->txt_nombre_testigo_1 == $firma->txt_firmado_por){?>
+                                <td style="padding: 4px 8px; text-align: center;" width="35%">
+                                    <span style="display: block; font-weight: 400; text-transform: uppecarse;"><?=$acta->txt_nombre_testigo_1?></p>
+                                    <img style="max-width=100%" width="100%" src="https://dev.2geeksonemonkey.com/senasica/api/web/<?=$firma->txt_url?>"/>
+                                    <p style="font-weight: 300; text-transform: uppecarse;">TESTIGO </p>
+                                </td>
+                                <td style="padding: 4px 8px;" width="20%"></td>
+                            <?php
+                                }
+                                if($acta->txt_nombre_testigo_2 == $firma->txt_firmado_por){?>
+                                    <td style="padding: 4px 8px; text-align: center;" width="35%">
+                                        <span style="display: block; font-weight: 400; text-transform: uppecarse;"><?=$acta->txt_nombre_testigo_2?></p>
+                                        <img style="max-width=100%" width="100%" src="https://dev.2geeksonemonkey.com/senasica/api/web/<?=$firma->txt_url?>"/>
+                                        <p style="font-weight: 300; text-transform: uppecarse;">TESTIGO </p>
+                                    </td>
+                                    
+                                <?php
+                                    }
+                            }
+                            ?>
+                            
+                            
                             <td style="padding: 4px 8px; text-align: center;" width="35%">
                             <span style="display: block; font-weight: 400; text-transform: uppecarse;"><?=$acta->txt_nombre_testigo_2?></p>
                                 <hr style="background-color: transparent; border: none; border-bottom: 1px solid black; height: 2px; margin-top: 70px; width: 100%;">
